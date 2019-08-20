@@ -22,7 +22,7 @@ $(document).on("click","#alertaTres",function(){
 });
 
 $(document).on("click","#alertaQuatro",function(){
-
+  navigator.notification.beep(2);
 });
 
 $(document).on("click","#codigoBarra",function(){
@@ -30,6 +30,9 @@ $(document).on("click","#codigoBarra",function(){
       function (result) {
         if(result.text == "A9U23-90009"){
           $(location).attr("href","page2.html");
+        }
+        if(result.text == result){
+          $(location).attr("url",result)
         }
           alert("Nós temos um código de barras\n" +
                 "Resultado: " + result.text + "\n" +
